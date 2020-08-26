@@ -27,7 +27,7 @@ const Home = ({navigation}) => {
       </View>
       <LocationBtn
         icon
-        currentLocation={'Okerube, Ikotun'}
+        currentLocation={'Current Location... Press to change'}
         onPress={() => navigation.navigate('Search')}
       />
       <View style={styles.actionsWrapper}>
@@ -38,6 +38,11 @@ const Home = ({navigation}) => {
           onPress={() => navigation.navigate('Route')}
         />
       </View>
+      <Text style={styles.disclaimer}>
+        <Text style={{color: secondaryColor}}>Disclaimer:</Text> This is not an
+        official report, and this application has no relationship with the NPF
+        or Federal Government of Nigeria
+      </Text>
     </Container>
   );
 };

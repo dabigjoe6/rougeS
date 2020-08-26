@@ -15,8 +15,14 @@ const Route = ({navigation}) => {
           />
         </View>
         <View style={styles.locationWrapper}>
-          <LocationBtn currentLocation={'Your Location'} />
-          <LocationBtn currentLocation={'Alagomeji, Yaba'} />
+          <LocationBtn
+            onPress={() => navigation.navigate('Search')}
+            currentLocation={'Your Location'}
+          />
+          <LocationBtn
+            onPress={() => navigation.navigate('Search')}
+            currentLocation={'Alagomeji, Yaba'}
+          />
         </View>
       </View>
       <View style={styles.mapArea}>

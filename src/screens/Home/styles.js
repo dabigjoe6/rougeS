@@ -11,12 +11,17 @@ export const styles = {
     color: 'white',
   },
   downArrow: {
-    // backgroundColor: 'pink',
     height: 50,
   },
   actionsWrapper: {
     width: '100%',
     alignItems: 'center',
     marginTop: 30,
+  },
+  disclaimer: {
+    color: '#636369',
+    textAlign: 'center',
+    marginTop: 20,
+    paddingHorizontal: 30,
   },
 };
