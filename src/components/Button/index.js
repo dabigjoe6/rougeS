@@ -4,9 +4,10 @@ import {Button as Btn} from 'react-native-elements';
 import {styles} from './styles';
 import {secondaryColor} from '../../styles/colors';
 
-const Button = ({title, alt}) => {
+const Button = ({title, alt, ...props}) => {
   return (
     <Btn
+      {...props}
       title={title}
       buttonStyle={{
         ...styles.button,

@@ -1,10 +1,4 @@
 export const styles = {
-  container: {
-    backgroundColor: 'black',
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
   locationIcon: {
     height: 150,
   },

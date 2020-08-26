@@ -6,8 +6,10 @@ export const styles = {
     height: 55,
     width: '80%',
     alignItems: 'center',
-    paddingLeft: 20,
-    paddingRight: 20,
+    marginBottom: 10,
+  },
+  icon: {
+    paddingHorizontal: 20,
   },
   text: {
     color: 'white',

@@ -1,40 +1,44 @@
 import React from 'react';
-import {View, Text, StatusBar} from 'react-native';
+import {View, Text} from 'react-native';
 import LottieView from 'lottie-react-native';
 import {styles} from './styles';
 import {secondaryColor} from '../../styles/colors';
-import {LocationBtn, Button} from '../../components';
+import {LocationBtn, Button, Container} from '../../components';
 
-const Home = () => {
+const Home = ({navigation}) => {
   return (
-    <>
-      <StatusBar backgroundColor="black" />
-      <View style={styles.container}>
+    <Container>
+      <LottieView
+        source={require('../../res/lottie/lf30_editor_i4cXOJ.json')}
+        style={styles.locationIcon}
+        autoPlay
+      />
+      <View style={styles.row}>
+        <Text style={styles.text}>
+          Report rogue <Text style={{color: secondaryColor}}>SARS</Text>{' '}
+          operatives currently at{' '}
+        </Text>
         <LottieView
-          source={require('../../res/lottie/lf30_editor_i4cXOJ.json')}
-          style={styles.locationIcon}
+          source={require('../../res/lottie/lf30_editor_0L5HgJ.json')}
           autoPlay
           loop
+          style={styles.downArrow}
         />
-        <View style={styles.row}>
-          <Text style={styles.text}>
-            Report rogue <Text style={{color: secondaryColor}}>SARS</Text>{' '}
-            operatives currently at{' '}
-          </Text>
-          <LottieView
-            source={require('../../res/lottie/lf30_editor_0L5HgJ.json')}
-            autoPlay
-            loop
-            style={styles.downArrow}
-          />
-        </View>
-        <LocationBtn currentLocation={'Okerube, Ikotun'} />
-        <View style={styles.actionsWrapper}>
-          <Button title="Report now" />
-          <Button title="Check route" alt={true} />
-        </View>
       </View>
-    </>
+      <LocationBtn
+        icon
+        currentLocation={'Okerube, Ikotun'}
+        onPress={() => navigation.navigate('Search')}
+      />
+      <View style={styles.actionsWrapper}>
+        <Button title="Report now" />
+        <Button
+          title="Check route"
+          alt={true}
+          onPress={() => navigation.navigate('Route')}
+        />
+      </View>
+    </Container>
   );
 };
 
