@@ -31,7 +31,10 @@ const Home = ({navigation}) => {
         onPress={() => navigation.navigate('Search')}
       />
       <View style={styles.actionsWrapper}>
-        <Button title="Report now" />
+        <Button
+          title="Report now"
+          onPress={() => navigation.navigate('Success')}
+        />
         <Button
           title="Check route"
           alt={true}
